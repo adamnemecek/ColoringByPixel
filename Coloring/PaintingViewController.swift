@@ -9,10 +9,19 @@
 import UIKit
 import SpriteKit
 
+@objc protocol PaintingViewControllerUIDelegate {
+        func didPaint(arg1: Int, expected: Int, timelapse: Bool, flood: Bool)
+        func didFailToUseBucket()
+        func didUseBucket()
+        func didFlood()
+        func didAutomaticallyPaint()
+        func didScaleGL(arg1: Float)
+}
+
 class PaintingViewController: UIViewController {
     
     var imageID: String!                            // 图片名(本地png或gif)
-    var mtlView: ColoringMTLView!                   // 渲染视图
+    var mtkView: ColoringMTKView!                   // 渲染视图
     var skView: SKView!                             // spriteKit View
     var skScene: SKScene!                           // spriteKit Scene
     var scrollView: UIScrollView!                   // scrollView
@@ -70,28 +79,12 @@ class PaintingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO:
-        /*
-         
-         1.
-         [glkView setupGLWithImageID: delegate:];
-         
-         2. 设置涂过的颜色数组
-         self.completedColors = []
-         
-         3. 初始化颜色面板
-         self.colorCollectionView =
-         self.colorCollectionView.delegate = self
-         self.colorCollectionView.dataSource = self
-         self.colorCollectionView.backgroundColor =
-         */
-        
-        // mtlView
-        mtlView = ColoringMTLView()
+        // mtkView
+        mtkView = ColoringMTKView(frame: view.bounds, imageID: imageID, delegate: self)
         
         // scrollView
-        scrollView = UIScrollView(frame: CGRect.init(origin: CGPoint.zero, size: view.bounds.size))
-        dummy = UIView(frame: CGRect.init(origin: CGPoint.zero, size: scrollView.bounds.size))
+        scrollView = UIScrollView(frame: CGRect(origin: CGPoint.zero, size: view.bounds.size))
+        dummy = UIView(frame: CGRect(origin: CGPoint.zero, size: scrollView.bounds.size))
         dummy.backgroundColor = UIColor.clear
         scrollView.addSubview(dummy)
         scrollView.minimumZoomScale = 1.0
@@ -106,7 +99,7 @@ class PaintingViewController: UIViewController {
         scrollView.addGestureRecognizer(singleTap)
         
         // longPress
-        longPress = UILongPressGestureRecognizer.init(target: self, action: #selector(longPressRecognized(recognizer:)))
+        longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPressRecognized(recognizer:)))
         longPress.cancelsTouchesInView = false
         longPress.minimumPressDuration = 0.3
         scrollView.addGestureRecognizer(longPress)
@@ -151,7 +144,7 @@ extension PaintingViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
-            mtlView.scrollViewDidScroll(scrollView: scrollView)
+            mtkView.scrollViewDidScroll(scrollView: scrollView)
         }
     }
     
@@ -160,30 +153,28 @@ extension PaintingViewController: UIScrollViewDelegate {
 //    }
 }
 
-//extension PaintingViewController: PaintingViewControllerUIDelegate {
-//    func didPaint(arg1: Int, expected: Int, timelapse: Bool, fromFlood: Bool) {
-//
-//    }
-//
-//    func didFailToUseBucket() {
-//
-//    }
-//
-//    func didUseBucket() {
-//
-//    }
-//
-//    func didFlood() {
-//
-//    }
-//
-//    func didAutomaticallyPaint() {
-//
-//    }
-//
-//    func didScaleGL(arg1: Float) {
-//
-//    }
-//}
+extension PaintingViewController: PaintingViewControllerUIDelegate {
+    func didPaint(arg1: Int, expected: Int, timelapse: Bool, flood: Bool) {
 
+    }
 
+    func didFailToUseBucket() {
+
+    }
+
+    func didUseBucket() {
+
+    }
+
+    func didFlood() {
+
+    }
+
+    func didAutomaticallyPaint() {
+
+    }
+
+    func didScaleGL(arg1: Float) {
+
+    }
+}

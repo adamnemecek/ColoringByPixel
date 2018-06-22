@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243459A820DCE2AB00C8E392 /* ColoringRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243459A720DCE2AB00C8E392 /* ColoringRenderer.swift */; };
+		243459AA20DCEA2A00C8E392 /* ColoringMTKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243459A920DCEA2A00C8E392 /* ColoringMTKView.swift */; };
+		243459AC20DCF31C00C8E392 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243459AB20DCF31C00C8E392 /* ImageManager.swift */; };
+		243459AE20DD180400C8E392 /* public in Resources */ = {isa = PBXBuildFile; fileRef = 243459AD20DD180400C8E392 /* public */; };
 		2481D42220DA3A03001EF9B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481D42120DA3A03001EF9B5 /* AppDelegate.swift */; };
 		2481D42920DA3A04001EF9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2481D42820DA3A04001EF9B5 /* Assets.xcassets */; };
 		2481D42C20DA3A04001EF9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2481D42A20DA3A04001EF9B5 /* LaunchScreen.storyboard */; };
 		2481D43420DA3A2F001EF9B5 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481D43320DA3A2F001EF9B5 /* PaintingViewController.swift */; };
-		2481D43820DCCFD2001EF9B5 /* ColoringMTLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481D43720DCCFD2001EF9B5 /* ColoringMTLView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243459A720DCE2AB00C8E392 /* ColoringRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringRenderer.swift; sourceTree = "<group>"; };
+		243459A920DCEA2A00C8E392 /* ColoringMTKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoringMTKView.swift; sourceTree = "<group>"; };
+		243459AB20DCF31C00C8E392 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		243459AD20DD180400C8E392 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		2481D41E20DA3A03001EF9B5 /* Coloring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coloring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2481D42120DA3A03001EF9B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2481D42820DA3A04001EF9B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2481D42B20DA3A04001EF9B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2481D42D20DA3A04001EF9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2481D43320DA3A2F001EF9B5 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
-		2481D43720DCCFD2001EF9B5 /* ColoringMTLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringMTLView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,12 @@
 		2481D42020DA3A03001EF9B5 /* Coloring */ = {
 			isa = PBXGroup;
 			children = (
+				243459AD20DD180400C8E392 /* public */,
 				2481D42120DA3A03001EF9B5 /* AppDelegate.swift */,
 				2481D43320DA3A2F001EF9B5 /* PaintingViewController.swift */,
-				2481D43720DCCFD2001EF9B5 /* ColoringMTLView.swift */,
+				243459A920DCEA2A00C8E392 /* ColoringMTKView.swift */,
+				243459A720DCE2AB00C8E392 /* ColoringRenderer.swift */,
+				243459AB20DCF31C00C8E392 /* ImageManager.swift */,
 				2481D42820DA3A04001EF9B5 /* Assets.xcassets */,
 				2481D42A20DA3A04001EF9B5 /* LaunchScreen.storyboard */,
 				2481D42D20DA3A04001EF9B5 /* Info.plist */,
@@ -122,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243459AE20DD180400C8E392 /* public in Resources */,
 				2481D42C20DA3A04001EF9B5 /* LaunchScreen.storyboard in Resources */,
 				2481D42920DA3A04001EF9B5 /* Assets.xcassets in Resources */,
 			);
@@ -134,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243459AA20DCEA2A00C8E392 /* ColoringMTKView.swift in Sources */,
+				243459AC20DCF31C00C8E392 /* ImageManager.swift in Sources */,
 				2481D42220DA3A03001EF9B5 /* AppDelegate.swift in Sources */,
-				2481D43820DCCFD2001EF9B5 /* ColoringMTLView.swift in Sources */,
+				243459A820DCE2AB00C8E392 /* ColoringRenderer.swift in Sources */,
 				2481D43420DA3A2F001EF9B5 /* PaintingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

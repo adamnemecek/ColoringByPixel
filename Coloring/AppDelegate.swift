@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow.init()
         window?.makeKeyAndVisible()
-        let paintingVC = PaintingViewController.init(imageID: "asdf")
+        let paintingVC = PaintingViewController.init(imageID: "piggybank")
         paintingVC.view.backgroundColor = UIColor.yellow
         window?.rootViewController = paintingVC
         return true

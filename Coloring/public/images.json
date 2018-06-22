@@ -1,0 +1,59 @@
+{
+  "images": [
+    {
+      "id": "balloon",
+      "release_date": "2017-11-25 00:00:00",
+	  "content_type": "png"
+    },
+    {
+      "id": "bottle",
+      "release_date": "2017-11-25 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "doggo",
+      "release_date": "2017-11-25 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "guittar_guy",
+      "release_date": "2017-11-25 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "hamburguer_01",
+      "free": false,
+      "release_date": "2017-11-25 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "piggybank",
+      "free": false,
+      "release_date": "2017-11-25 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "santa",
+      "free": false,
+      "release_date": "2017-12-15 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "smileybig",
+      "free": false,
+      "release_date": "2017-11-25 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "unicornio_01",
+      "free": false,
+      "release_date": "2017-11-25 00:00:00",
+			 "content_type": "png"
+    },
+    {
+      "id": "xmas_tree",
+      "release_date": "2017-12-15 00:00:00",
+			 "content_type": "png"
+    }
+  ]
+}
